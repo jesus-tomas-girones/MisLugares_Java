@@ -5,8 +5,6 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 
 import com.example.mislugares.Aplicacion;
 import com.example.mislugares.R;
@@ -20,6 +18,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentActivity;
 
 public class MapaActivity extends FragmentActivity
         implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {

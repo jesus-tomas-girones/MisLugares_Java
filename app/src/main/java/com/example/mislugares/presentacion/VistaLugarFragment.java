@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,13 +17,14 @@ import android.widget.Toast;
 
 import com.example.mislugares.Aplicacion;
 import com.example.mislugares.R;
-import com.example.mislugares.casos_uso.CasosUsoLugar;
 import com.example.mislugares.casos_uso.CasosUsoLugarFecha;
 import com.example.mislugares.datos.LugaresBD;
 import com.example.mislugares.modelo.Lugar;
 
 import java.text.DateFormat;
 import java.util.Date;
+
+import androidx.fragment.app.Fragment;
 
 public class VistaLugarFragment extends Fragment {
 
@@ -48,36 +48,6 @@ public class VistaLugarFragment extends Fragment {
                             ViewGroup contenedor, Bundle savedInstanceState) {
       setHasOptionsMenu(true);
       View vista = inflador.inflate(R.layout.vista_lugar, contenedor, false);
-/*      vista.findViewById(R.id.barra_mapa).setOnClickListener(
-              new View.OnClickListener() { public void onClick(View view) {
-                 usoLugar.verMapa(lugar); }  });
-      vista.findViewById(R.id.barra_url).setOnClickListener(
-        new View.OnClickListener() { public void onClick(View view) {
-            usoLugar.verPgWeb(lugar); }  });
-      vista.findViewById(R.id.barra_telefono).setOnClickListener(
-         new View.OnClickListener() {public void onClick(View view) {
-            usoLugar.llamarTelefono(lugar);  }  });
-      vista.findViewById(R.id.camara).setOnClickListener(
-              new View.OnClickListener() {public void onClick(View view) {
-                 uriUltimaFoto = usoLugar.tomarFoto(RESULTADO_FOTO);  }  });
-      vista.findViewById(R.id.galeria).setOnClickListener(
-              new View.OnClickListener() {public void onClick(View view) {
-                 usoLugar.ponerDeGaleria(RESULTADO_GALERIA);  }  });
-      vista.findViewById(R.id.eliminar_foto).setOnClickListener(
-              new View.OnClickListener() {public void onClick(View view) {
-                 usoLugar.ponerFoto(pos, "", foto);  }  });
-      vista.findViewById(R.id.icono_hora).setOnClickListener(
-              new View.OnClickListener() {
-                 public void onClick(View view) { usoLugar.cambiarHora(pos); } });
-      vista.findViewById(R.id.hora).setOnClickListener(
-              new View.OnClickListener() {
-                 public void onClick(View view) { usoLugar.cambiarHora(pos); } });
-      vista.findViewById(R.id.icono_fecha).setOnClickListener(
-              new View.OnClickListener() {
-                 public void onClick(View view) { usoLugar.cambiarFecha(pos); } });
-      vista.findViewById(R.id.fecha).setOnClickListener(
-              new View.OnClickListener() {
-                 public void onClick(View view) { usoLugar.cambiarFecha(pos); } });*/
       return vista;
    }
 
@@ -184,17 +154,6 @@ public class VistaLugarFragment extends Fragment {
          //adaptador.cursor = lugares.extraeCursor();
          pos = adaptador.posicionId(_id);
          actualizaVistas();
-         //v.invalidate();
-         //getActivity().finish();
-         //            lugar = adaptador.lugarPosicion (pos);  //ESto es peligroso, el lugar puede haber
-
-/*            int _id = adaptador.idPosicion(pos);
-            lugar = lugares.elemento(_id);
-            adaptador.setCursor(lugares.extraeCursor()); // Lo hemos quitado de CasosUsoLugar.guardar
-            pos = adaptador.idPosicion(_id);  //MAL!!!!!!!!!!!!! */
-
-         //Antes:    actualizaVistas();
-         //findViewById(R.id.scrollView1).invalidate();
       } else if (requestCode == RESULTADO_GALERIA) {
          if (resultCode == Activity.RESULT_OK) {
             usoLugar.ponerFoto(pos, data.getDataString(), foto);
@@ -237,29 +196,5 @@ public class VistaLugarFragment extends Fragment {
             return super.onOptionsItemSelected(item);
       }
    }
-
-   /*void verMapa(View view) {
-      usoLugar.verMapa(lugar);
-   }
-
-   void llamarTelefono(View view) {
-      usoLugar.llamarTelefono(lugar);
-   }
-
-   void verPgWeb(View view) {
-      usoLugar.verPgWeb(lugar);
-   }
-
-   public void ponerDeGaleria(View view) {
-      usoLugar.ponerDeGaleria(RESULTADO_GALERIA);
-   }
-
-   void tomarFoto(View view) {
-      uriUltimaFoto = usoLugar.tomarFoto(RESULTADO_FOTO);
-   }
-
-   public void eliminarFoto(View view) {
-      usoLugar.ponerFoto(pos, "", foto);
-   }*/
 
 }

@@ -3,8 +3,6 @@ package com.example.mislugares.casos_uso;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -19,6 +17,9 @@ import com.example.mislugares.presentacion.DialogoSelectorHora;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 public class CasosUsoLugarFecha extends CasosUsoLugar
                  implements TimePickerDialog.OnTimeSetListener,

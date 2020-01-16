@@ -2,7 +2,6 @@ package com.example.mislugares.casos_uso;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.view.View;
 
 import com.example.mislugares.presentacion.AcercaDeActivity;
 import com.example.mislugares.presentacion.MapaActivity;

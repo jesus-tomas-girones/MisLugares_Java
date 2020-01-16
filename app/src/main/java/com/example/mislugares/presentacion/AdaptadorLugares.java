@@ -1,6 +1,5 @@
 package com.example.mislugares.presentacion;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,8 @@ import com.example.mislugares.R;
 import com.example.mislugares.datos.RepositorioLugares;
 import com.example.mislugares.modelo.GeoPunto;
 import com.example.mislugares.modelo.Lugar;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class AdaptadorLugares extends
         RecyclerView.Adapter<AdaptadorLugares.ViewHolder> {

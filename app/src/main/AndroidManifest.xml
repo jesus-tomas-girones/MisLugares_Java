@@ -35,7 +35,7 @@
         <activity android:name="com.example.mislugares.presentacion.MapaActivity"
             android:screenOrientation="portrait"/>
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="es.upv.jtomas.mislugares.fileProvider2"
             android:exported="false"
             android:grantUriPermissions="true">

@@ -1,7 +1,6 @@
 package com.example.mislugares.presentacion;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -14,6 +13,8 @@ import com.example.mislugares.casos_uso.CasosUsoLugar;
 import com.example.mislugares.datos.LugaresBD;
 import com.example.mislugares.modelo.Lugar;
 import com.example.mislugares.modelo.TipoLugar;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class EdicionLugarActivity extends AppCompatActivity {
     private LugaresBD lugares;

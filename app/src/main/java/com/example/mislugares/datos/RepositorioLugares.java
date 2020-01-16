@@ -9,5 +9,4 @@ public interface RepositorioLugares {
     void borrar(int id); //Elimina el elemento con el id indicado
     int tamaño(); //Devuelve el número de elementos
     void actualiza(int id, Lugar lugar); //Reemplaza un elemento
-
 }

@@ -3,10 +3,11 @@ package com.example.mislugares.presentacion;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.text.format.DateFormat;
 
 import java.util.Calendar;
+
+import androidx.fragment.app.DialogFragment;
 
 public class DialogoSelectorHora extends DialogFragment {
 

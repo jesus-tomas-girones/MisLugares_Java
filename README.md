@@ -1,4 +1,4 @@
-# MisLugares_Kotlin
+# MisLugares_Java
 Proyecto obtenido tras realizar el curso MOOC de EdX "Android: introducción a la programación 2019"
 
 Para una descripción sobre la arquitectura usada en la aplicación:
@@ -8,6 +8,22 @@ Si quieres seguir el curso para crear esta aplicación:
 https://www.edx.org/es/course/android-introduccion-a-la-programacion
 
 O directamente desde nuestra Web:
+http://www.androidcurso.com/index.php/mooc/programa-mooc
+
+también puedes seguir los links que se listan más abajo
+
+# Instalación
+Antes de ejecutar el proyecto añade en res/values/google_maps_api.xml el siguiente contenido:
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string name="google_maps_key" templateMergeStrategy="preserve"
+           translatable="false">
+      A55aSyCm66pUPrsA3zjpvMfZEIws4zblaNL5dHg
+   </string>
+</resources>
+
+Reemplaza la clave de API, por la obtenida en la consola de Google Maps.
 
 # Precurso
 

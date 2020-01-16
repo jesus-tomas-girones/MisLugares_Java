@@ -1,20 +1,13 @@
 package com.example.mislugares.casos_uso;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.content.FileProvider;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -33,6 +26,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+
+import androidx.core.content.FileProvider;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 
 public class CasosUsoLugar {
 
@@ -63,18 +61,6 @@ public class CasosUsoLugar {
       adaptador.notifyDataSetChanged();
    }
 
-/*   public void ponerValoracion(int pos, float valor) {
-      Lugar lugar = adaptador.lugarPosicion(pos);
-      lugar.setValoracion(valor);
-      actualizaPosLugar(pos, lugar);
-      SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(
-              actividad);
-      if (pref.getString("orden", "0").equals("1")) actividad.finish();
-
-      //int id = adaptador.idPosicion(pos);
-      //guardar(id, lugar);
-   }*/
-
    public void mostrar(int pos) {
       VistaLugarFragment fragmentVista = obtenerFragmentVista();
       if (fragmentVista != null) {
@@ -97,7 +83,6 @@ public class CasosUsoLugar {
    public void editar(int pos, int codidoSolicitud) {
       Intent i = new Intent(actividad, EdicionLugarActivity.class);
       i.putExtra("pos", pos);
-      //actividad.startActivityForResult(i, codidoSolicitud);
       if (fragment != null)
            fragment.startActivityForResult(i, codidoSolicitud);
       else actividad.startActivityForResult(i, codidoSolicitud);
@@ -113,8 +98,6 @@ public class CasosUsoLugar {
       if (manejador.findFragmentById(R.id.selector_fragment) == null) {
          actividad.finish();
       } else {
-         //VistaLugarFragment fagmentVista = (VistaLugarFragment)
-         //        manejador.findFragmentById(R.id.vista_lugar_fragment);
          mostrar(0);
       }
    }
@@ -175,7 +158,6 @@ public class CasosUsoLugar {
               MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
       i.addCategory(Intent.CATEGORY_OPENABLE);
       i.setType("image/*");
-      //actividad.startActivityForResult(i, codidoSolicitud);
       if (fragment != null)
          fragment.startActivityForResult(i, codidoSolicitud);
       else actividad.startActivityForResult(i, codidoSolicitud);
@@ -191,7 +173,6 @@ public class CasosUsoLugar {
 
    public void visualizarFoto(Lugar lugar, ImageView imageView) {
       if (lugar.getFoto() != null && !lugar.getFoto().isEmpty()) {
-         //imageView.setImageURI(Uri.parse(lugar.getFoto()));
          imageView.setImageBitmap(reduceBitmap(actividad, lugar.getFoto(), 1024, 1024));
       } else {
          imageView.setImageBitmap(null);
@@ -256,5 +237,3 @@ public class CasosUsoLugar {
    }
 
 }
-
-

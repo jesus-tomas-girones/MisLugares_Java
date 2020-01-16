@@ -1,9 +1,6 @@
 package com.example.mislugares.presentacion;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +9,10 @@ import com.example.mislugares.Aplicacion;
 import com.example.mislugares.R;
 import com.example.mislugares.casos_uso.CasosUsoLugar;
 import com.example.mislugares.datos.LugaresBD;
-import com.example.mislugares.datos.RepositorioLugares;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class SelectorFragment extends Fragment {
    private LugaresBD lugares;
@@ -28,8 +28,6 @@ public class SelectorFragment extends Fragment {
       recyclerView = vista.findViewById(R.id.recyclerView);
       return vista;
    }
-
-
 
    @Override
    public void onActivityCreated(Bundle state) {

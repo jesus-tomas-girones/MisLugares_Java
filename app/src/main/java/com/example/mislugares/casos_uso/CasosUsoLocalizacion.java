@@ -9,13 +9,14 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 
 import com.example.mislugares.Aplicacion;
 import com.example.mislugares.modelo.GeoPunto;
 import com.example.mislugares.presentacion.AdaptadorLugares;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
 
 import static android.content.Context.LOCATION_SERVICE;
 
