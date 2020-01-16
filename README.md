@@ -15,6 +15,7 @@ también puedes seguir los links que se listan más abajo
 # Instalación
 Antes de ejecutar el proyecto añade en res/values/google_maps_api.xml el siguiente contenido:
 
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
    <string name="google_maps_key" templateMergeStrategy="preserve"
@@ -22,6 +23,7 @@ Antes de ejecutar el proyecto añade en res/values/google_maps_api.xml el siguie
       A55aSyCm66pUPrsA3zjpvMfZEIws4zblaNL5dHg
    </string>
 </resources>
+```
 
 Reemplaza la clave de API, por la obtenida en la consola de Google Maps.
 
